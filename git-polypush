@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Add this to your bashrc to get 'git branch'-like completion:
+#
+# _git_polypush()
+# {
+#     _git_branch
+# }
+
+set -xe  # fail on first error
+
+
+BRANCH=$1
+
+if [ "X${BRANCH}" == "X" ]; then
+    # Get current branch name
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+fi
+
+if [ "X${BRANCH}" == "Xmaster" ]; then
+    echo "Rebase master on master then push on origin master is not a good idea..."
+    exit 1
+fi
+
+if [ "X${BRANCH}" == "X" ]; then
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+fi
+
+echo "> check commits about to be rebased..."
+git rebase -i $(git oldest-ancestor)
+
+echo "> synchronizing master..."
+git fetch origin
+git checkout master
+git rebase origin/master master
+
+echo "> interactive rebase of ${BRANCH} onto latest master..."
+git checkout $BRANCH
+git rebase master -i
+
+echo "> fast-forward local master to the top of ${BRANCH}"
+git checkout master
+git rebase $BRANCH
+
+echo "> force-push branch to github and update remote master..."
+git push origin $BRANCH:$BRANCH -f
+git push origin master:master
+
+echo "> deleting local & remote ${BRANCH}..."
+git push origin :${BRANCH}
+git branch -D $BRANCH
