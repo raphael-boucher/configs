@@ -1,0 +1,8 @@
+{
+  // debug mode (verbose output to ST python console)
+  "debug": false,
+
+  // run flake8 lint on file saving
+  "lint_on_save": true,
+  "report_on_success": false,
+}

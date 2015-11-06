@@ -1,0 +1,6 @@
+{
+	"ha_style": "outlined",
+	"icons": false,
+  "file_exts": [".css", ".sass", ".scss", ".less", ".styl", ".sublime-settings", ".tmTheme", ".erb", ".haml", ".back"],
+  "ha_style": "underlined"
+}

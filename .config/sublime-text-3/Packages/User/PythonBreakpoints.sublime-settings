@@ -1,0 +1,7 @@
+{
+  // preferred debugger (pdb, ipdb, pudb,..) - must support set_trace() call
+  "debugger": "ipdb",
+
+  // auto-save the file on breakpoint toggle
+  "save_on_toggle": true
+}

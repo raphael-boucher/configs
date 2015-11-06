@@ -1,0 +1,51 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+		"SetDjangoSyntax",
+		"ShowEncoding"
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Anaconda",
+		"BracketHighlighter",
+		"CleanCSS",
+		"Color Highlighter",
+		"Djaneiro",
+		"DocBlockr",
+		"Emmet",
+		"Emmet Css Snippets",
+		"EncodingHelper",
+		"FindKeyConflicts",
+		"GitGutter",
+		"Gutter Color",
+		"Highlight",
+		"HTML5",
+		"INI",
+		"isort",
+		"Jade",
+		"Jasmine JS",
+		"JavaScript Console",
+		"JavaScript Refactor",
+		"JsFormat",
+		"LastModifiedIndicator",
+		"LESS",
+		"Modific",
+		"Package Control",
+		"Python 3",
+		"Python Breakpoints",
+		"Python Flake8 Lint",
+		"Sass",
+		"SetDjangoSyntax",
+		"ShowEncoding",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeREPL",
+		"TrailingSpaces",
+		"Wrap Plus"
+	]
+}

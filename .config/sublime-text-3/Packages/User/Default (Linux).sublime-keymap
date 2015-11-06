@@ -1,0 +1,43 @@
+[
+  {
+    "keys": ["f12"],
+    "command": "reindent",
+    "args": {
+      "single_line": false
+    }
+  }, {
+    "keys": ["ctrl+alt+z"],
+    "command": "auto_pep8",
+    "args": {
+      "preview": false
+    }
+  }, {
+    "keys": ["ctrl+è"],
+    "command": "show_panel",
+    "args": {
+      "panel": "console",
+      "toggle": true
+    }
+  }, {
+    "keys": ["ctrl+alt+d"],
+    "command": "flake8_lint"
+  }, {
+    "keys": ["ctrl+alt+c"],
+    "command": "flake8_next_error"
+  }, {
+    "keys": ["keypad_enter"],
+    "command": "find_next",
+    "context":
+      [{
+      "key": "panel",
+      "operand": "find"
+    }, {
+      "key": "panel_has_focus"
+    }]
+  },
+  {
+    "keys": ["ctrl+alt+f"],
+    "command": "js_format"
+  }
+
+]

@@ -1,0 +1,16 @@
+[{
+  "keys": ["f12"],
+  "command": "reindent",
+  "args": {
+    "single_line": false
+  }
+}, {
+  "keys": [],
+  "command": "goto_definition"
+}, {
+  "keys": ["ctrl+alt+z"],
+  "command": "auto_pep8",
+  "args": {
+    "preview": false
+  }
+}]
