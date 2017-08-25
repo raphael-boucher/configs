@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper)
+plugins=(git python virtualenvwrapper django)
 
 # User configuration
 
@@ -79,9 +79,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-plugins=(git python virtualenvwrapper django)
-
-source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
-WORKON_HOME=$HOME/dev/.virtualenv
-export NVM_DIR="/home/raphael/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
