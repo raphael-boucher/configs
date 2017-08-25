@@ -1,1 +1,7 @@
-export PATH=$PATH:/home/raphael/dev/.virtualenv/autoslave/bin/githook-check-debug:$HOME/.npm-packages/bin
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+WORKON_HOME=$HOME/dev/.virtualenv
+
+_git_polypush()
+{
+   _git_branch
+}
