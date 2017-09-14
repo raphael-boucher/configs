@@ -79,7 +79,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR=/usr/bin/vim
+
+# Fix for intellij https://youtrack.jetbrains.com/issue/IDEA-78860
+export IBUS_ENABLE_SYNC_MODE=1
+
+# Virtual env
+WORKON_HOME=$HOME/dev/.virtualenv
+export PROJECT_HOME=$HOME/dev
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+
+# Git
+alias g='git'
+_git_rebasepush()
+{
+   _git_branch
+}
+
+# NVM
+export NVM_DIR="/home/raphael/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# ipython
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 
-# Load my profile
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
