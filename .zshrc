@@ -45,7 +45,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python virtualenvwrapper django)
 
 # User configuration
 
@@ -79,6 +78,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+
+# Load my profile
+
+# Load my profile
+# [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
 export EDITOR=/usr/bin/vim
 
 # Fix for intellij https://youtrack.jetbrains.com/issue/IDEA-78860
@@ -104,3 +110,23 @@ export NVM_DIR="/home/raphael/.nvm"
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 
+plugins=(git python virtualenvwrapper django)
+
+
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# run some commands, then give the shell to the user
+# example : zsh -is eval 'your command; another one'
+if [[ $1 == eval ]]
+then
+    "$@"
+set --
+fi
